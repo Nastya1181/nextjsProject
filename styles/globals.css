@@ -1,14 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lora&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Russo+One&display=swap);
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto", "Lora", "Russo one";
+  font-size: 18px;
+}
+/* -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+ */
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button, input {
+  cursor: pointer;
+  border: none;
+}
+
+body {
+  min-height: 100vh;
 }
 
 * {

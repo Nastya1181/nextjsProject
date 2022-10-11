@@ -1,0 +1,130 @@
+@import './variables.module.scss';
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    position: absolute;
+    width: 151px;
+    background: $howeredDarkGreen;
+    box-shadow: $darkGreenHoverShadow;
+    border-radius: 6px;
+    color: $darkGreen;
+    @include descriptionFont;
+
+    &:hover {
+        background: $turquoise;
+        box-shadow: none;
+        color: white;
+    }
+
+    &:active {
+        color: white;
+        box-shadow: none;
+        background: $darkGreen;
+    }
+
+    &:disabled {
+        color: rgba($darkGreen, 0.45);
+        box-shadow: none;
+        background: $howeredDarkGreen;
+    }
+
+}
+
+.radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $gray2;
+    border-radius: 50%;
+    background-clip: content-box;
+    padding: 2px;
+
+    background-position: center;
+
+    &:hover {
+        border-color: $turquoiseBright;
+    }
+
+    &:checked {
+        background-color: $turquoiseBright;
+        border-color: $turquoiseBright;
+    }
+
+    &:disabled {
+        border-color: $gray4;
+        background-color: transparent;
+    }
+}
+
+.check {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $gray2;
+    border-radius: 2px;
+
+    &:hover {
+        border-color: $turquoiseBright;
+    }
+
+    &:checked {
+        background-image: url('./marker.svg');
+        background-repeat: no-repeat;
+        background-size: 14px 10px;
+        background-color: $turquoiseBright;
+        background-position: 2px 4px;
+        border: none;
+    }
+
+    &:disabled {
+        border-color: #C4C4C4;
+        background: transparent;
+    }
+
+}
+
+.radioButton {
+    display: block;
+    width: 400px;
+    height: 50px;
+    border-radius: 3px;
+    box-shadow: $noHoverShadow;
+    @include descriptionFont;
+
+    .radio,
+    label {
+        display: inline-block;
+        line-height: 14px;
+    }
+
+    .radio {
+        margin-left: 14px;
+    }
+
+    label {
+        margin-left: 18px;
+    }
+
+    &:hover:not(.disabled) {
+        box-shadow: $hoverShadow;
+
+        .radio {
+            border-color: $turquoiseBright;
+
+        }
+    }
+
+    &.checked {
+        box-shadow: $pressedShadow;
+    }
+
+    &.disabled {
+        box-shadow: $hoverShadow;
+        color: $gray3;
+    }
+
+}

@@ -1,0 +1,67 @@
+$turquoiseBright: #00EAD9;
+$turquoise: #3AB8BC;
+$darkGreen: #006666;
+$howeredDarkGreen: #E6F0F0;
+$gray2: #828282;
+$gray3: #BDBDBD;
+$gray4: #E0E0E0;
+
+$textFontsize: 18px;
+$subtitleFontsize: 20px;
+$descriptionFontsize: 14px;
+
+// не совсем поняла, что понималось под шрифтом, поэтому еще сделала миксины
+@mixin textFont {
+    /* XL / Текст */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333333;
+
+}
+
+@mixin subtitleFont {
+    /* XL / Subtitle inner */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: $gray2;
+}
+
+@mixin descriptionFont {
+    /* XL-M / Краткое описание */
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+$noHoverShadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+$hoverShadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+$pressedShadow: 0px 0px 4px #BDBDBD;
+$darkGreenHoverShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
