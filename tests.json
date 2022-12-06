@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "638c60938661c4ae1aa05c64"
+  },
+  "testId": 1,
+  "taskId": 1,
+  "type": "text",
+  "hasTimer": true,
+  "timeMs": 120,
+  "question": "С именем какого князя связано объединение Галицкого и Волынского княжеств?",
+  "answers": [
+    {
+      "id": 1,
+      "text": "Романа Мстиславича",
+      "isCorrect": true
+    },
+    {
+      "id": 2,
+      "text": "Андрея Боголюбского",
+      "isCorrect": true
+    },
+    {
+      "id": 3,
+      "text": "Александра Невского",
+      "isCorrect": true
+    },
+    {
+      "id": 4,
+      "text": "Юрия Долгорукого",
+      "isCorrect": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "638c60ee8661c4ae1aa05c67"
+  },
+  "testId": 1,
+  "taskId": 2,
+  "type": "image",
+  "hasTimer": false,
+  "question": "Посмотрите на карту и определите о какой войне идет речь?",
+  "url": "/imgs/map.png",
+  "answers": [
+    {
+      "id": 5,
+      "text": "Гражданская война в России",
+      "isCorrect": true
+    },
+    {
+      "id": 6,
+      "text": "Советско-финляндская война",
+      "isCorrect": true
+    },
+    {
+      "id": 7,
+      "text": "Первая мировая война",
+      "isCorrect": true
+    },
+    {
+      "id": 8,
+      "text": "Вторая мировая война",
+      "isCorrect": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "638ca3ee8661c4ae1aa05c69"
+  },
+  "taskId": 1,
+  "testId": 2,
+  "type": "text",
+  "hasTimer": true,
+  "timeMs": 180,
+  "question": "С именем какого князя связано объединение Галицкого и Волынского княжеств?",
+  "answers": [
+    {
+      "id": 1,
+      "text": "Романа Мстиславича",
+      "isCorrect": true
+    },
+    {
+      "id": 2,
+      "text": "Андрея Боголюбского",
+      "isCorrect": true
+    },
+    {
+      "id": 3,
+      "text": "Александра Невского",
+      "isCorrect": true
+    },
+    {
+      "id": 4,
+      "text": "Юрия Долгорукого",
+      "isCorrect": true
+    }
+  ]
+}]

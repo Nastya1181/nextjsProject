@@ -10,54 +10,38 @@ $textFontsize: 18px;
 $subtitleFontsize: 20px;
 $descriptionFontsize: 14px;
 
+
 // не совсем поняла, что понималось под шрифтом, поэтому еще сделала миксины
 @mixin textFont {
     /* XL / Текст */
 
-    font-family: 'Roboto';
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+   /*  line-height: 24px; */
     /* or 133% */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: #333333;
 
 }
 
 @mixin subtitleFont {
     /* XL / Subtitle inner */
-
-    font-family: 'Roboto';
+    font-family: inherit;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
-    /* identical to box height, or 120% */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
+/*     line-height: 24px; */
     color: $gray2;
 }
 
 @mixin descriptionFont {
     /* XL-M / Краткое описание */
-
-    font-family: 'Roboto';
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
-    /* identical to box height, or 129% */
-
-    display: flex;
-    align-items: center;
-
+  /*   line-height: 18px; */
     color: #000000;
 }
 

@@ -1,13 +1,14 @@
 @import './variables.module.scss';
 
+
 .button {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 12px 24px;
     gap: 12px;
-    position: absolute;
-    width: 151px;
+    margin-left: auto;
+    width: 119px;
     background: $howeredDarkGreen;
     box-shadow: $darkGreenHoverShadow;
     border-radius: 6px;
@@ -42,7 +43,7 @@
     border-radius: 50%;
     background-clip: content-box;
     padding: 2px;
-
+    display: inline-block; 
     background-position: center;
 
     &:hover {
@@ -91,22 +92,30 @@
     display: block;
     width: 400px;
     height: 50px;
+    line-height: 50px;
     border-radius: 3px;
     box-shadow: $noHoverShadow;
     @include descriptionFont;
+    position: relative;
+    background-color: #FFFFFF;
 
     .radio,
     label {
         display: inline-block;
         line-height: 14px;
+        
     }
 
     .radio {
         margin-left: 14px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        margin-right: 12px;
     }
 
     label {
-        margin-left: 18px;
+        margin-left: 52px;
     }
 
     &:hover:not(.disabled) {
@@ -128,3 +137,272 @@
     }
 
 }
+
+.icon {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    display: inline-block;
+}
+
+.header__icons {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    height: 100px;
+    line-height: 48px;
+    top: 50%;
+    margin-top: -24px;
+}
+
+.iconText {
+    position: absolute;
+    display: inline-block;
+    line-height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: $darkGreen;
+}
+
+.iconContainer {   
+    margin-right: 33px; 
+    width: 114px;
+    display: inline-block;
+}
+
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    box-shadow: $hoverShadow;
+    z-index: 2;
+    background-color: #FFFFFF;
+}
+
+.main {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 100px;
+    width: calc(100vw - 100px);
+    height: 100px;
+    border-bottom: 1px solid $gray4;
+    line-height: 100px;
+    text-align: center;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+
+
+.subtitle {
+    @include subtitleFont;
+    width: 824px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -32px;
+    margin-right: 38px;
+}
+
+
+
+
+.tasksContainer {
+    width: 34px;
+    height: 936px;
+    top: 100px;
+    left: 33px;
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+}
+
+.taskNumber {
+    width: 34px;
+    height: 48px;
+    @include textFont;
+    align-self: center;
+    border-bottom: 1px solid $gray4;
+    padding: 12px;
+    justify-content: center;
+    color: $gray3;
+
+  
+    
+}
+
+a:nth-last-child(1) .taskNumber {
+    border-bottom: none;
+}
+
+
+
+
+.answeredTask {
+    color: $darkGreen;
+}
+
+.currentTask {
+    color: $turquoiseBright;
+}
+
+.main {
+width: calc(100vw - 100px);
+//background-color: white;
+display: flex;
+height: calc(100vh - 100px);
+top: 100px;
+left: 100px;
+
+}
+
+
+
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 60%;
+    top: 60%;
+
+/* Gradients / G 1 */
+
+background: linear-gradient(225deg, #FFD003 0%, #3AB8BC 51.04%, #026666 100%);
+opacity: 0.5;
+border-radius: 1443.83px;
+filter: blur(180.479px);
+
+}
+
+.taskContainer {
+    width: 824px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    z-index: 10;
+    word-wrap: break-all;
+    white-space:pre-wrap;
+
+}
+
+.taskText {
+    height: 48px;
+    @include textFont;
+    margin: auto;
+    margin-top: 20px;
+ }
+
+.answersContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    text-align: start;
+}
+
+.imageContainer {
+    max-height: 400px;
+    max-width: 600px;
+    display: inline-block;
+}
+
+.timer {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    margin-bottom: 62px;
+}
+
+
+@media (max-height: 768px) { 
+    .taskContainer {
+        width: 624px;   
+    }
+
+    .imageContainer {
+        max-height: 220px;
+        max-width: 330px;
+    }
+
+    .answersContainer {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .radioButton {
+        width: 300px;
+    }
+
+    .taskText {
+        font-size: 16px;
+        line-height: 24px; 
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 20px; 
+    }
+
+    .timer {
+        height: 80px;
+        width: 80px;
+    }
+    
+ }
+
+ @media (max-width: 912px) { 
+    .taskContainer {
+        width: 400px;   
+    }
+
+    .imageContainer {
+        max-height: 220px;
+        max-width: 330px;
+    }
+
+    .answersContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .radioButton {
+        width: 400px;
+    }
+
+    .taskText {
+        font-size: 16px;
+        line-height: 24px; 
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 20px; 
+    }
+
+    .timer {
+        height: 80px;
+        width: 80px;
+    }
+    
+ }
+
