@@ -38,13 +38,29 @@ export default function Task(props) {
           selected={selected}
           setSelected={setSelected}
         />
+        <div className={styles.buttons}>
+          {task.isSkippable && (
+          <Button
+            text="Пропустить"
+            disabled={false}
+            taskId={props.taskId}
+            testId={props.testId}
+            answer={selected}
+            isSkippable={true}
+            isLast={props.isLast}
+          />
+        )}
         {task && (
           <Button
             text="ответить"
             disabled={!selected}
-            next={`${props.testId}/${1 + +props.taskId}`}
+            taskId={props.taskId}
+            testId={props.testId}
+            answer={selected}
+            isLast={props.isLast}
           />
         )}
+        </div>
       </div>
     </>
   );
@@ -59,10 +75,13 @@ export async function getServerSideProps(context) {
     taskId: Number(query.Task[1])
   };
   let task;
+  let lastTaskId;
 
   try {
     const db = await mongo.connect(url);
     task = await db.db("testSystem").collection("tests").findOne(filter);
+    let tasks = await db.db("testSystem").collection("tests").find({testId: Number(query.Task[0])}).toArray();
+    lastTaskId = tasks.pop().taskId;
     db.close();
   } catch (err) {
     console.log(err);
@@ -70,9 +89,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      testId: query.Task[0],
-      taskId: query.Task[1],
+      testId: Number(query.Task[0]),
+      taskId: Number(query.Task[1]),
       task: JSON.stringify(task),
+      isLast: task?.taskId === lastTaskId
     },
   };
 }

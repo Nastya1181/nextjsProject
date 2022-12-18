@@ -8,7 +8,7 @@ export default function AnswersContainer(props) {
     <div className={styles.answersContainer}>
       {props.answers?.map((answer) => (
         <RadioButton
-          checked={isSelected(answer.id)}
+          isChecked={isSelected(answer.id)}
           disabled={false}
           text={answer.text}
           setSelected={props.setSelected}

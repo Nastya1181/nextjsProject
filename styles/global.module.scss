@@ -2,18 +2,11 @@
 
 
 .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 12px 24px;
-    gap: 12px;
-    margin-left: auto;
     width: 119px;
     background: $howeredDarkGreen;
     box-shadow: $darkGreenHoverShadow;
     border-radius: 6px;
-    color: $darkGreen;
-    @include descriptionFont;
 
     &:hover {
         background: $turquoise;
@@ -35,6 +28,24 @@
 
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    gap: 12px;
+    width: fit-content;
+}
+
+.button, .skipButton {
+    color: $darkGreen;
+    @include descriptionFont;
+}
+
+.skipButton {
+    background: none;
+}
+
 .radio {
     appearance: none;
     width: 20px;
@@ -50,7 +61,7 @@
         border-color: $turquoiseBright;
     }
 
-    &:checked {
+    &_checked {
         background-color: $turquoiseBright;
         border-color: $turquoiseBright;
     }
@@ -60,6 +71,7 @@
         background-color: transparent;
     }
 }
+
 
 .check {
     appearance: none;
@@ -272,7 +284,29 @@ left: 100px;
 }
 
 
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
+    height: calc(100% - 50px);
+    width: calc(100% - 50px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
 
+.right {
+    color: rgb(0, 223, 0);
+}
+
+.wrong {
+    color: red;
+    margin-right: 20px;
+}
+
+.result {
+    @include textFont;
+}
 
 .gradient {
     position: absolute;

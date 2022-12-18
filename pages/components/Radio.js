@@ -4,10 +4,9 @@ import styles from "../../styles/global.module.scss";
 export default function Radio(props) {
   return (
     <input
-      className={styles.radio}
+      className={`${styles.radio} ${props.isChecked? styles.radio_checked: ''}`}
       type="radio"
       disabled={props.disabled}
-      checked={props.checked}
     />
   );
 }

@@ -23,7 +23,9 @@ export default function Layout(props) {
   };
 
   useEffect(() => {
-    getTest();
+    if (router?.query.Task) {
+      getTest();
+    }
   }, []);
 
     return (
@@ -34,15 +36,15 @@ export default function Layout(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <header className={styles.header}>
-          <div className={styles.header__icons}>
+          {router?.query.Task && <div className={styles.header__icons}>
             <Icon text={`${router?.query.Task[1]}/20`} src='/imgs/questions.svg'/>
             <Icon text={`${testInfo?.duration}`} src='/imgs/time.svg'/>
-          </div>
+          </div>}
           <div className={styles.subtitle}>{testInfo?.name}</div>
           <div className={styles.logo}><Image  src={'/imgs/logo.svg'} height={64} width={64} /></div>
         </header>
         <aside className={styles.aside}>
-          <TasksContainer testId={router?.query.Task[0]} tasks={testInfo?.tasks}/>
+          {router?.query.Task && <TasksContainer testId={router?.query.Task[0]} tasks={testInfo?.tasks}/>}
         </aside>
         <main className={`${styles.main}`}>
             { props.children }
