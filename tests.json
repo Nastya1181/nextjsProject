@@ -29,7 +29,9 @@
       "text": "Юрия Долгорукого",
       "isCorrect": true
     }
-  ]
+  ],
+  "rightAnswer": 1,
+  "isSkippable": false
 },{
   "_id": {
     "$oid": "638c60ee8661c4ae1aa05c67"
@@ -42,26 +44,28 @@
   "url": "/imgs/map.png",
   "answers": [
     {
-      "id": 5,
+      "id": 1,
       "text": "Гражданская война в России",
       "isCorrect": true
     },
     {
-      "id": 6,
+      "id": 2,
       "text": "Советско-финляндская война",
       "isCorrect": true
     },
     {
-      "id": 7,
+      "id": 3,
       "text": "Первая мировая война",
       "isCorrect": true
     },
     {
-      "id": 8,
+      "id": 4,
       "text": "Вторая мировая война",
       "isCorrect": true
     }
-  ]
+  ],
+  "rightAnswer": 2,
+  "isSkippable": true
 },{
   "_id": {
     "$oid": "638ca3ee8661c4ae1aa05c69"
@@ -93,5 +97,7 @@
       "text": "Юрия Долгорукого",
       "isCorrect": true
     }
-  ]
+  ],
+  "rightAnswer": 1,
+  "isSkippable": true
 }]
